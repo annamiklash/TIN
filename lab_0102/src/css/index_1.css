@@ -1,0 +1,37 @@
+p {
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 10pt;
+}
+
+#header {
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 25px;
+    text-align: center;
+   background: coral;
+}
+
+#cats_table, #pics_table, th, td {
+    border: 2px solid coral;
+}
+
+#cats_table, #pics_table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+#surprise_link {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+#dairy_list, #bakery_list {
+    list-style-type: square;
+}
