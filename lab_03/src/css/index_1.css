@@ -1,0 +1,161 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: rgb(238, 174, 202);
+    background: linear-gradient(20deg, rgba(238, 174, 202, 1) 0%, rgba(104, 156, 217, 0) 100%);
+}
+
+#header_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#header_cats_img {
+    margin-bottom: 2%;
+    width: 400px;
+    height: 280px;
+    border-radius: 10%;
+    box-shadow: 10px 10px 5px #eeaeca;
+    transform: rotate(10deg);
+}
+
+#header_text {
+    font-family: 'Grandstander', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: #b00029;
+}
+
+
+#main_container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 800px) {
+    #main_container {
+        flex-direction: column-reverse;
+    }
+}
+
+#text_container {
+    padding-left: 1%;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#sims_text_image {
+    flex-grow: 1
+}
+
+#wrap_image_1 {
+    float: left;
+    width: 200px;
+    height: 220px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 7%;
+}
+
+#wrap_image_2 {
+    float: left;
+    width: 190px;
+    height: 210px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#gallery_container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 500px;
+}
+
+.gallery_sims_pic {
+    flex-grow: 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+}
+
+.text, figcaption {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Container for flexboxes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+    flex: 25%;
+    padding-right: 10px;
+    flex-grow: 1;
+}
+
+/* On screens that are 1200px wide or less, go from four columns to two columns */
+@media screen and (width: 1300px) {
+    .column {
+        flex: 50%;
+    }
+}
+
+/* On screens that are 800 wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .row {
+        flex-direction: column;
+        margin-left: 2%;
+    }
+    #wrap_image_1 {
+        width: 300px;
+        height: 280px;
+    }
+}
+
+
+.pquote {
+    font-family: 'Grandstander', cursive;
+    float: right;
+    width: 150px;
+    background: #adc0de;
+    border-radius: 6%;
+    box-shadow: 5px 5px 10px #eeaeca;
+    font-weight: bold;
+    padding: 13px;
+    margin: 0 13px 13px 0;
+    color: #b00029;
+}
+
+blockquote {
+    margin: 0;
+}
+
+.footer {
+    flex-grow: 1;
+    align-self: center;
+}
+
+#footer_text {
+    font-family: 'Grandstander', cursive;
+    color: #b00029;
+    font-size: 30px;
+    text-shadow: 2px 2px 10px #ff0000;
+}
+
+
+
+
