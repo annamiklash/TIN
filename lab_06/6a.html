@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 04</title>
+    <script src="6a.js"></script>
+    <link rel="stylesheet" href="6a.css"/>
+</head>
+<body>
+<div id="form_component">
+    <label for="temp_input">Provide Temperature</label>
+    <input type="number" id="temp_input" name="temp_input"><br><br>
+    <div>
+        <input type="checkbox" id="toCelsius" name="toCelsius">
+        <label for="toCelsius">To Celsius</label>
+
+        <input type="checkbox" id="toFahrenheit" name="toFahrenheit">
+        <label for="toFahrenheit">To Fahrenheit</label>
+
+        <button id="submit" type="button"
+                onclick="convertTemperature()">Submit
+        </button>
+
+    </div>
+    <br>
+    <div id="result">
+        Result: <label for="output"></label>
+        <input type='number' id="output" disabled="disabled"/>
+    </div>
+</div>
+
+
+
+</body>
+</html>
