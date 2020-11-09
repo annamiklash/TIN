@@ -41,7 +41,8 @@ function isFormValid() {
         age.value = "SHOULD BE 21 OR OLDER";
         return false;
     }
-
+    let form = document.getElementById('form');
+    form.reset();
     return true;
 
 }

@@ -10,3 +10,12 @@ th, td {
 #cats_table, th, td {
     border: 2px solid coral;
 }
+
+h2, #cat_form {
+    text-align: center;
+}
+
+#cats_table {
+    margin-left: auto;
+    margin-right: auto;
+}
