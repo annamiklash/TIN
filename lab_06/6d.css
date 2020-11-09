@@ -1,0 +1,12 @@
+th {
+    height: 50px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+#cats_table, th, td {
+    border: 2px solid coral;
+}
