@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+<form id="form">
+    <label for="operand1">First Operand:</label>
+    <input id="operand1" type="number">
+    <br><br>
+    <label for="operand2">Second Operand:</label>
+    <input id="operand2" type="number">
+    <br><br>
+    <label for="operations">Operation to Perform:</label>
+    <select name="operations" id="operations">
+        <option selected="selected">Choose operation</option>
+        <option value="add">Add</option>
+        <option value="sub">Subtract</option>
+        <option value="div">Divide</option>
+        <option value="mul">Multiply</option>
+    </select>
+    <br><br>
+    <button type="button" id="button" onclick="sendData()">SUBMIT</button>
+    <br><br>
+    <label id="result"></label>
+</form>
+</body>
+</html>
+<script>
+    function sendData() {
+        let xmlHttpRequest = new XMLHttpRequest();
+        let operand1 = document.getElementById("operand1").value;
+        let operand2 = document.getElementById("operand2").value;
+        let operations = document.getElementById("operations");
+        let selectedOption = operations.options[operations.selectedIndex].value;
+
+        let json = JSON.stringify({"operand1": operand1, "operand2": operand2, "operation": selectedOption});
+        let url = '9b';
+        xmlHttpRequest.open('POST', url, true);
+
+        xmlHttpRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+        xmlHttpRequest.onreadystatechange = function () {
+            if (xmlHttpRequest.readyState === 4 && xmlHttpRequest.status === 200) {
+                document.getElementById("result").innerHTML = "Result is: " + xmlHttpRequest.responseText;
+            }
+        }
+        xmlHttpRequest.send(json);
+    }
+
+</script>

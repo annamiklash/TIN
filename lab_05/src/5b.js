@@ -1,5 +1,3 @@
-
-
 function Student(firstName, lastName, id, gradesArr) {
     this.firstName = firstName;
     this.lastName = lastName;
